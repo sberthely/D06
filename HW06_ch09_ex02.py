@@ -15,10 +15,23 @@
 
 # Body
 
+def has_no_e():
+	fin = open('words.txt', 'r')
+	list1 = list()
+	count = 0
+
+	for line in fin:
+		word = line.strip()
+		count += 1
+		if word.find('e') == -1:
+			list1.append(word)
+	
+	print('Percentage: ' + str((len(list1)*100)/count))
+
 
 ##############################################################################
 def main():
-    pass  # Call your function(s) here.
+	has_no_e()
 
 if __name__ == '__main__':
     main()
